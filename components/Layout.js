@@ -1,5 +1,5 @@
 import React from 'react'
-import NavBar from './NavBar'
+import NavBar from './Navbar'
 import Notify from './Notify'
 import Modal from './Modal'
 

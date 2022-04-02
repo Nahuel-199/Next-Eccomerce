@@ -4,7 +4,7 @@ import {useRouter} from 'next/router'
 import {DataContext} from '../store/GlobalState'
 import Cookie from 'js-cookie'
 
-function NavBar() {
+function Navbar() {
     const router = useRouter()
     const {state, dispatch} = useContext(DataContext)
     const { auth, cart } = state
@@ -129,4 +129,4 @@ function NavBar() {
     )
 }
 
-export default NavBar
+export default Navbar
