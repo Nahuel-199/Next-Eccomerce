@@ -1,0 +1,49 @@
+.products{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    justify-content: center;
+    margin: 20px 0;
+}
+.products .card{
+    margin: 10px auto;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);   
+}
+
+.products .card:hover{
+    transform: scale(1.05);
+}
+
+.products .card-img-top{
+    height: 350px;
+    width: 100%;
+    cursor: pointer;
+    filter: brightness(80%);
+}
+
+.products .card-img-top:hover{
+    filter: brightness(100%);
+}
+
+.products .card-title{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+    color: rgb(70, 70, 70);
+    font-family: 'Urbanist', sans-serif;
+    text-transform: uppercase;
+}
+.products .card-text{
+    height: 70px;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    color: rgb(70, 70, 70);
+}
+
+
+/* --------- Detail Product ----------- */
+.detail_page .img-thumbnail.active{
+    border-color: orangered;
+    padding: 2px;
+}
