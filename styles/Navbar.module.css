@@ -1,0 +1,107 @@
+ .containerNav{
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+ }  
+
+ @media screen and (min-width:375px) {
+    .containerNav{
+        width: 141%;
+    }
+
+    .logo{
+        width: 70px;
+        margin-left: -101px;
+    }
+
+    .icon{
+        margin-left: -16px;
+    }
+}
+
+@media screen and (min-width:360px) {
+    .containerNav{
+        width: 141%;
+    }
+
+    .logo{
+        width: 70px;
+        margin-left: -101px;
+    }
+
+    .icon{
+        margin-left: -16px;
+    }
+}
+ 
+ @media screen and (min-width:540px) {
+    .containerNav{
+        width: 134%;
+    }
+    .logo{
+        width: 65px;
+        margin-left: -48%;
+    }
+}
+
+ @media screen and (min-width:768px) {
+    .containerNav{
+        width: 132%;
+    }
+    .logo{
+        width: 80px;
+        margin-left: -59%;
+    }
+}
+
+ @media screen and (min-width:820px) {
+    .containerNav{
+        margin-left: -42px;
+        width: 129%;
+    }
+
+    .logo{
+        width: 80px;
+        margin-left: -59%;
+    }
+}
+
+@media screen and (min-width:912px) {
+    .containerNav{
+        width: 100%;
+    }
+
+    .logo{
+        width: 80px;
+        margin-left: -45%;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .containerNav{
+        width: 110%;
+    }
+}
+
+@media screen and (min-width:1280px) {
+    .containerNav{
+        width: 100%;
+    }
+
+    .logo{
+       display: none;
+    }
+
+    .icon{
+        margin-left: -2px;
+    }
+}
+    
+    

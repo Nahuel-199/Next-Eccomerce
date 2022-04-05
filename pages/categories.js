@@ -14,9 +14,9 @@ const categories = () => {
 
     const createCategory = async () => {
         if(auth.user.role !== "admin")
-        return dispatch({ type: "NOTIFY", payload: {error: "Authentication is not valid."} })
+        return dispatch({ type: "NOTIFY", payload: {error: "La autenticación no es válida."} })
 
-        if(!name) return dispatch({ type: "NOTIFY", payload: {error: "Name can not be left blank."} })
+        if(!name) return dispatch({ type: "NOTIFY", payload: {error: "El nombre no se puede dejar en blanco."} })
 
         dispatch({ type: "NOTIFY", payload: {loading: true}})
 
@@ -45,16 +45,16 @@ const categories = () => {
   return (
     <div className="col-md-6 mx-auto my-3">
         <Head>
-            <title>Categories</title>
+            <title>Categorias</title>
         </Head>
         <div className="input-group mb-3">
               <input type="text" className="form-control"
-              placeholder="Add a new category" value={name}
+              placeholder="Agrega una nueva categoria" value={name}
               onChange={e => setName(e.target.value)} />
 
             <button className="btn btn-secondary ml-1"
             onClick={createCategory}>
-                {id ? "Update": "Create"}
+                {id ? "Actualizar": "Crear"}
                 </button>
         </div>
         {

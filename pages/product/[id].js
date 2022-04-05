@@ -19,7 +19,7 @@ const DetailProduct = (props) => {
     return(
         <div className="row detail_page">
             <Head>
-                <title>Detail Product</title>
+                <title>Detalle Producto</title>
             </Head>
 
             <div className="col-md-6">
@@ -48,15 +48,15 @@ const DetailProduct = (props) => {
                         product.inStock > 0
                         ? <h6 className="text-danger" style={{
                             fontFamily: "'Urbanist', sans-serif", 
-                        }}>In Stock: {product.inStock}</h6>
+                        }}>En Stock: {product.inStock}</h6>
                         : <h6 className="text-danger" style={{
                             fontFamily: "'Urbanist', sans-serif",
-                        }}>Out Stock</h6>
+                        }}>Sin Stock</h6>
                     }
 
                     <h6 className="text-danger" style={{
                         fontFamily: "'Urbanist', sans-serif",
-                    }}>Sold: {product.sold}</h6>
+                    }}>Vendidos: {product.sold}</h6>
                 </div>
 
                 <div className="my-2" style={{
@@ -68,7 +68,7 @@ const DetailProduct = (props) => {
 
                 <button type="button" className="btn btn-dark d-block my-3 px-5"
                 onClick={() => dispatch(addToCart(product, cart))} >
-                    Buy
+                    COMPRAR
                 </button>
 
             </div>

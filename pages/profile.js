@@ -54,13 +54,13 @@ const Profile = () => {
     const changeAvatar = (e) => {
         const file = e.target.files[0]
         if(!file)
-            return dispatch({type: 'NOTIFY', payload: {error: 'File does not exist.'}})
+            return dispatch({type: 'NOTIFY', payload: {error: 'El archivo no existe.'}})
 
         if(file.size > 1024 * 1024) //1mb
-            return dispatch({type: 'NOTIFY', payload: {error: 'The largest image size is 1mb.'}})
+            return dispatch({type: 'NOTIFY', payload: {error: 'El tamaño de imagen más grande es de 1mb.'}})
 
         if(file.type !== "image/jpeg" && file.type !== "image/png") //1mb
-            return dispatch({type: 'NOTIFY', payload: {error: 'Image format is incorrect.'}})
+            return dispatch({type: 'NOTIFY', payload: {error: 'El formato de la imagen es incorrecto.'}})
         
         setData({...data, avatar: file})
     }
@@ -89,13 +89,13 @@ const Profile = () => {
     return( 
         <div className="profile_page">
             <Head>
-                <title>Profile</title>
+                <title>Perfil</title>
             </Head>
 
             <section className="row text-secondary my-3">
                 <div className="col-md-4">
                     <h3 className="text-center text-uppercase">
-                        {auth.user.role === 'user' ? 'User Profile' : 'Admin Profile'}
+                        {auth.user.role === 'user' ? 'Perfil De Usuario' : 'Admin Perfil'}
                     </h3>
 
                     <div className="avatar">
@@ -103,16 +103,16 @@ const Profile = () => {
                         alt="avatar" />
                         <span>
                             <i className="fas fa-camera"></i>
-                            <p>Change</p>
+                            <p>Cambiar</p>
                             <input type="file" name="file" id="file_up"
                             accept="image/*" onChange={changeAvatar} />
                         </span>
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="name">Name</label>
+                        <label htmlFor="name">Nombre</label>
                         <input type="text" name="name" value={name} className="form-control"
-                        placeholder="Your name" onChange={handleChange} />
+                        placeholder="Su Nombre..." onChange={handleChange} />
                     </div>
 
                     <div className="form-group">
@@ -122,35 +122,35 @@ const Profile = () => {
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="password">New Password</label>
+                        <label htmlFor="password">Nueva contraseña</label>
                         <input type="password" name="password" value={password} className="form-control"
-                        placeholder="Your new password" onChange={handleChange} />
+                        placeholder="Tu nueva contraseña..." onChange={handleChange} />
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="cf_password">Confirm New Password</label>
+                        <label htmlFor="cf_password">Confirmar Nueva contraseña</label>
                         <input type="password" name="cf_password" value={cf_password} className="form-control"
-                        placeholder="Confirm new password" onChange={handleChange} />
+                        placeholder="Confirmar nueva contraseña..." onChange={handleChange} />
                     </div>
 
                     <button className="btn btn-info" disabled={notify.loading}
                     onClick={handleUpdateProfile}>
-                        Update
+                        Actualizar
                     </button>
                 </div>
 
                 <div className="col-md-8">
-                    <h3 className="text-uppercase">Orders</h3>
+                    <h3 className="text-uppercase">Pedidos</h3>
                     <div className="my-3 table-responsive">
                         <table className='table-bordered table-hover w-100 text-uppercase'
                         style={{minWidth: "600px", cursor: "pointer"}}>
                             <thead className='bg-light font-weight-bold'>
                             <tr>
                                  <td className='p-2'>id</td>
-                                 <td className='p-2'>date</td>
+                                 <td className='p-2'>fecha</td>
                                  <td className='p-2'>total</td>
-                                 <td className='p-2'>delivered</td>
-                                 <td className='p-2'>paid</td>
+                                 <td className='p-2'>entregado</td>
+                                 <td className='p-2'>pago</td>
                             </tr>
                             </thead>
 

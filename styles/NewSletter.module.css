@@ -16,6 +16,7 @@
     font-size: 24px;
     font-weight: 300;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .inputContainer{
@@ -39,3 +40,88 @@
     background-color: teal;
     color: white;
 }
+
+@media screen and (min-width:320px) {
+    .container{
+        width: 141%;
+    }
+}
+
+@media screen and (min-width:380px) {
+    .container{
+        width: 134%;
+        height: 40vh;
+    }
+}
+
+@media screen and (min-width:390px) {
+    .container{
+        width: 130%;
+        height: 40vh;
+    }
+}
+
+@media screen and (min-width:410px) {
+    .container{
+        width: 123%;
+        height: 40vh;
+    }
+}
+
+
+
+
+@media screen and (min-width:425px) {
+    .container{
+        width: 100%;
+        height: 40vh;
+    }
+}
+
+@media screen and (min-width:540px) {
+    .container{
+        width: 120%;
+        height: 50vh;
+        margin-left: 21px;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .container{
+        width: 127%;
+        height: 50vh;
+        margin-left: -6px;
+    }
+}
+
+@media screen and (min-width:820px) {
+    .container{
+        width: 119%;
+        height: 50vh;
+        margin-left: -15px;
+    }
+}
+
+@media screen and (min-width:912px) {
+    .container{
+        width: 125%;
+        height: 38vh;
+        margin-left: -86px;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .container{
+        width: 110%;
+        height: 75vh;
+        margin-left: -22px;
+    }
+}
+@media screen and (min-width:1280px) {
+    .container{
+        width: 105%;
+        height: 60vh;
+        margin-left: -24px;;
+    }
+}
+

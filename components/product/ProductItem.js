@@ -15,7 +15,7 @@ const ProductItem = ({ product, handleCheck }) => {
                 style={{marginLeft: '5px', flex: 1}}
                 disabled={product.inStock === 0 ? true : false} 
                 onClick={() => dispatch(addToCart(product, cart))} >
-                    Buy
+                AGREGAR AL CARRITO
                 </button>
             </>
         )
@@ -64,8 +64,8 @@ const ProductItem = ({ product, handleCheck }) => {
               <h6 className="text-danger">${product.price}</h6>
                 {
                     product.inStock > 0
-                    ? <h6 className="text-danger">In Stock: {product.inStock}</h6>
-                    : <h6 className="text-danger">Out Stock</h6>
+                    ? <h6 className="text-danger">En Stock: {product.inStock}</h6>
+                    : <h6 className="text-danger">Sin Stock</h6>
                 }
           </div>
           {/* <p className="text1 d-block">{product.description}</p> */}

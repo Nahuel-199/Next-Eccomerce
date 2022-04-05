@@ -44,7 +44,7 @@ const Register = () => {
   return (
     <div>
       <Head>
-        <title>Register</title>
+        <title>Registrarse</title>
       </Head>
       <form className="mx-auto my-4" style={{maxWidth: '500px'}} onSubmit={handleSubmit}>
       <div className="mb-3">
@@ -62,7 +62,7 @@ const Register = () => {
           </div>
         <div className="mb-3">
           <label htmlFor="exampleInputEmail1" className="form-label">
-            Email address
+          Correo electrónico
           </label>
           <input
             type="email"
@@ -74,12 +74,12 @@ const Register = () => {
             onChange={handleChangeInput}
           />
           <div id="emailHelp" className="form-text">
-            We'll never share your email with anyone else.
+          Nunca compartiremos tu correo electrónico con nadie más.
           </div>
         </div>
         <div className="mb-3">
           <label htmlFor="exampleInputPassword1" className="form-label">
-            Password
+            Contraseña
           </label>
           <input
             type="password"
@@ -92,7 +92,7 @@ const Register = () => {
         </div>
         <div className="mb-3">
           <label htmlFor="exampleInputPassword2" className="form-label">
-           Confirmar Password
+           Confirmar contraseña
           </label>
           <input
             type="password"
@@ -104,11 +104,11 @@ const Register = () => {
           />
         </div>
         <button type="submit" className="btn btn-dark w-100">
-         Register
+        Registrarse
         </button>
-        <p className="my-2">Already have an account? 
+        <p className="my-2">¿Ya tienes una cuenta?
           <Link href="/signin">
-            <a style={{color: 'crimson'}}> Login Now</a>
+            <a style={{color: 'crimson'}}> Inicia sesión ahora</a>
             </Link>
             </p>
       </form>

@@ -59,13 +59,13 @@ const ProductsManager = () => {
          const files = [...e.target.files]
 
          if(files.length === 0)
-         return dispatch({ type: "NOTIFY", payload: {error: "Files does not exist."} })
+         return dispatch({ type: "NOTIFY", payload: {error: "Los archivos no existen."} })
          files.forEach(file => {
              if(file.size > 1024 * 1024)
-             return err = "The largest image size is 1mb"
+             return err = "El tamaño de imagen más grande es de 1MB"
 
              if(file.type !== "image/jpeg" && file.type !== "image/png")
-             return err = "Image format is incorrect."
+             return err = "El formato de la imagen es incorrecto."
 
              num += 1;
              if(num <= 5) newImages.push(file)
@@ -76,7 +76,7 @@ const ProductsManager = () => {
 
          const imgCount = images.length
          if(imgCount + newImages.length > 5)
-         return dispatch({ type: "NOTIFY", payload: {error: "Select up to 5 images"}})
+         return dispatch({ type: "NOTIFY", payload: {error: "Selecciona hasta 5 imágenes"}})
          setImages([...images, ...newImages])
     }
 
@@ -89,10 +89,10 @@ const ProductsManager = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         if(auth.user.role !== "admin")
-        return dispatch({ type: "NOTIFY", payload: {error: "Authentication is not valid."}})
+        return dispatch({ type: "NOTIFY", payload: {error: "La autenticación no es válida."}})
 
         if(!title || !price || !color || !inStock || !description || category === "all" || images.length === 0)
-        return dispatch({ type: "NOTIFY", payload: {error: "Please add all the file."}})
+        return dispatch({ type: "NOTIFY", payload: {error: "Por favor agregue todos los campos."}})
 
         dispatch({ type: "NOTIFY", payload: {loading: true} })
         let media = []
@@ -116,14 +116,14 @@ const ProductsManager = () => {
     return(
         <div className="products_manager">
             <Head>
-                <title>Products Manager</title>
+                <title>Crear Productos</title>
             </Head>
 
             <form className="row" onSubmit={handleSubmit}>
                 <div className="col-md-6">
                    
                     <input type="text" name="title" value={title}
-                    placeholder="Title" className="d-block my-4 w-100 p-2" 
+                    placeholder="Titulo" className="d-block my-4 w-100 p-2" 
                     onChange={handleChangeInput}/>
 
                     <input type="text" name="color" value={color}
@@ -132,28 +132,28 @@ const ProductsManager = () => {
 
                       <div className="row">
                         <div className="col-sm-6">
-                            <label htmlFor="price">Price</label>
+                            <label htmlFor="price">Precio</label>
                             <input type="number" name="price" value={price}
-                            placeholder="Price" className="d-block w-100 p-2"
+                            placeholder="Precio" className="d-block w-100 p-2"
                             onChange={handleChangeInput} />
                         </div>
 
                         <div className="col-sm-6">
-                            <label htmlFor="price">In Stock</label>
+                            <label htmlFor="price">En Stock</label>
                             <input type="number" name="inStock" value={inStock}
-                            placeholder="inStock" className="d-block w-100 p-2"
+                            placeholder="En Stock" className="d-block w-100 p-2"
                             onChange={handleChangeInput} />
                         </div>
                     </div>
 
                     <textarea name="description" id="description" cols="30" rows="4" 
-                    placeholder="Description" onChange={handleChangeInput}
+                    placeholder="Descripcion" onChange={handleChangeInput}
                     className="d-block my-4 w-100 p-2" value={description}/>
 
                     <div className="input-group-prepend px-0 my-2">
                         <select name="category" id="category" value={category}
                         onChange={handleChangeInput} className="custom-select text-capitalize">
-                         <option value="all">All Products</option>
+                         <option value="all">Todos los productos</option>
                          {
                              categories.map(item => (
                                 <option key={item._id} value={item._id}>
@@ -169,10 +169,11 @@ const ProductsManager = () => {
                 <div className="col-md-6">
                           <div className="input-group mb-3">
                               <div className="input-group-prepend">
-                                  <span className="input-group-text">Upload</span>
+                                  <span className="input-group-text">Subir</span>
                               </div>
                               <div className="custom-file border rounded">
                                   <input type="file" className="custom-file-input"
+                                  placeholder="Cargar imagen o imagenes..."
                                   onChange={handleUploadInput} multiple accept="image/*" />
                               </div>
                           </div>
@@ -191,7 +192,7 @@ const ProductsManager = () => {
                           </div>
                 </div>
                 <button type="submit" className="btn btn-info my-2 px-4">
-                    {onEdit ? "Update" : "Create"}
+                    {onEdit ? "Actualizar" : "Crear"}
                     </button>
             </form>
          

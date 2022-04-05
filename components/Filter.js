@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import filterSearch from '../utils/filterSearch'
 import {getData} from '../utils/fetchData'
 import {useRouter} from 'next/router'
+import styles from "../styles/Filtros.module.css";
 
 const Filter = ({state}) => {
     const [search, setSearch] = useState('')
@@ -28,12 +29,12 @@ const Filter = ({state}) => {
     },[search])
 
     return (
-        <div className="input-group">
+        <div className={styles.containerFil}>
             <div className="input-group-prepend col-md-2 px-0 mt-2">
                 <select className="custom-select text-capitalize"
                 value={category} onChange={handleCategory}>
 
-                    <option value="all">All Products</option>
+                    <option value="all">Todos los Productos</option>
 
                     {
                         categories.map(item => (
@@ -45,6 +46,7 @@ const Filter = ({state}) => {
 
             <form autoComplete="off" className="mt-2 col-md-8 px-0">
                 <input type="text" className="form-control" list="title_product"
+                placeholder='Busque el producto por su nombre....'
                 value={search.toLowerCase()} onChange={e => setSearch(e.target.value)} />
             </form>
 
@@ -52,11 +54,11 @@ const Filter = ({state}) => {
                 <select className="custom-select text-capitalize"
                 value={sort} onChange={handleSort}>
 
-                     <option value="-createdAt">Newest</option>
-                     <option value="oldest">Oldest</option>
-                     <option value="-sold">Best sales</option>
-                     <option value="-price">Price: Hight-Low</option>
-                     <option value="price">Price: Low-Hight</option>
+                     <option value="-createdAt">Nuevos</option>
+                     <option value="oldest">Antiguos</option>
+                     <option value="-sold">Lo que mas sale</option>
+                     <option value="-price">Precio: Alto-Bajo</option>
+                     <option value="price">Precio: Bajo-Alto</option>
 
                 </select>
             </div>

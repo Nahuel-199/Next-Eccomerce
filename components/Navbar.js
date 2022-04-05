@@ -3,6 +3,8 @@ import Link from 'next/link'
 import {useRouter} from 'next/router'
 import {DataContext} from '../store/GlobalState'
 import Cookie from 'js-cookie'
+import styles from "../styles/Navbar.module.css";
+import { VscMenu } from "react-icons/vsc";
 
 function Navbar() {
     const router = useRouter()
@@ -22,7 +24,7 @@ function Navbar() {
         Cookie.remove('refreshtoken', {path: 'api/auth/accessToken'})
         localStorage.removeItem('firstLogin')
         dispatch({ type: 'AUTH', payload: {} })
-        dispatch({ type: 'NOTIFY', payload: {success: 'Logged out!'} })
+        dispatch({ type: 'NOTIFY', payload: {success: 'Ha cerrado sesion!'} })
         return router.push('/')
     }
 
@@ -62,21 +64,21 @@ function Navbar() {
                 <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <Link href="/profile">
 
-                        <a className="dropdown-item">Profile</a>
+                        <a className="dropdown-item">Perfil</a>
 
                     </Link>
                     {
                         auth.user.role === 'admin' && adminRouter()
                     }
                     <div className="dropdown-divider"></div>
-                    <button className="dropdown-item" onClick={handleLogout}>Logout</button>
+                    <button className="dropdown-item" onClick={handleLogout}>Cerrar Sesion</button>
                 </div>
             </li>
         )
     }
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className={styles.containerNav}>
             <Link href="/">
                 <a className="navbar-brand" style={{
                                         fontSize: "29px",
@@ -86,8 +88,9 @@ function Navbar() {
                                         color: "#4a3b76"
                                     }}>SUBLI FOX</a>
             </Link>
-            <img src='img/logoFox.png' style={{ width: "75px", marginLeft: "-25px" }}/>
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <img className={styles.logo} src='img/logoFox.png' />
+            <button className="navbar-toggler" style={{ width: "6%" }} type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <VscMenu className={styles.icon} style={{ fontSize: "29px"}}></VscMenu>
             </button>
             <div className="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                 <ul className="navbar-nav p-1">
@@ -107,7 +110,7 @@ function Navbar() {
                                     }}>
                                         {cart.length}
                                     </span>
-                                </i> Cart
+                                </i> Carrito
                             </a>
                         </Link>
                     </li>
@@ -117,7 +120,7 @@ function Navbar() {
                         ? <li className="nav-item">
                             <Link href="/signin">
                                 <a className={"nav-link" + isActive('/signin')}>
-                                    <i className="fas fa-user" aria-hidden="true"></i> Sign in
+                                    <i className="fas fa-user" aria-hidden="true"></i> Iniciar Sesion
                                 </a>
                             </Link>
                         </li>

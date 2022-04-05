@@ -7,7 +7,7 @@ const Newsletter = () => {
       <h1 className={styles.title}>Noticias</h1>
       <div className={styles.desc}>Si busca un producto personalizado por favor dejenos un email.</div>
       <div className={styles.inputContainer}>
-        <input className={styles.Input} placeholder="Your email" />
+        <input className={styles.Input} placeholder="Su email..." />
         <button className={styles.boton}>
           <Send />
         </button>

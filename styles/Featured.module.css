@@ -29,8 +29,91 @@
     position: relative;
 }
 
-@media screen and (max-width:480px) {
+@media screen and (min-width:360px) {
+    .container{
+        width: 108%;
+        height: 35vh;
+        margin-left: 17%;
+    }
+ }
+
+ @media screen and (min-width:390px) {
+    .container{
+        width: 108%;
+        height: 35vh;
+        margin-left: 11%;
+    }
+ }
+
+ @media screen and (min-width:410px) {
+    .container{
+        width: 108%;
+        height: 35vh;
+        margin-left: 8%;
+    }
+ }
+
+@media screen and (min-width:480px) {
    .container{
-       height: 50vh;
+       width: 108%;
+       height: 35vh;
+       margin-left: 7%;
    }
 }
+
+@media screen and (min-width:540px) {
+    .container{
+        width: 100%;
+        height: 50vh;
+        margin-left: 14%;
+    }
+ }
+
+@media screen and (min-width:768px) {
+    .container{
+        width: 112%;
+        height: 38vh;
+        margin-left: 9%;
+        margin-top: 30px;
+    }
+    .wrapper{
+        height: 110%;
+    }
+ }
+
+
+@media screen and (min-width:820px) {
+    .container{
+        width: 118%;
+        height: 38vh;
+        margin-left: -2%;
+        margin-top: 30px;
+    }
+ }
+
+ @media screen and (min-width:912px) {
+    .container{
+        width: 125%;
+    height: 38vh;
+    margin-left: -12%;
+    margin-top: 30px;
+    }
+ }
+
+ @media screen and (min-width:1024px) {
+    .container{
+        width: 109%;
+        height: 85vh;
+        margin-left: -2%;
+        margin-top: 30px;
+    }
+ }
+
+ @media screen and (min-width:1280px) {
+    .container{
+        width: 100%;
+        height: 80vh;
+        margin-left: 0%;
+        margin-top: 20px;
+    }
+ }

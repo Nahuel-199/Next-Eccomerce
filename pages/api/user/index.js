@@ -19,7 +19,7 @@ const getUsers = async (req, res) => {
     try {
        const result = await auth(req, res)
        if(result.role !== "admin") 
-       return res.status(400).json({err: "Authentication is not valid"})
+       return res.status(400).json({err: "La autenticación no es válida"})
 
         const users = await Users.find().select('-password')
         res.json({users})
@@ -38,7 +38,7 @@ const uploadInfor = async (req, res) => {
         const newUser = await Users.findOneAndUpdate({_id: result.id}, {name, avatar})
 
         res.json({
-            msg: "Update Success!",
+            msg: "Actualización exitosa!",
             user: {
                 name,
                 avatar,

@@ -13,9 +13,30 @@
 /* //--S--// */
 @media screen and (min-width:320px) {
     .containerBanner{
-        font-size: 10px;
-        margin-left: -12px;
-        width: 103%;
+        font-size: 12px;
+        width: 124%;
+    }
+}
+
+
+@media screen and (min-width:360px) {
+    .containerBanner{
+        font-size: 13px;
+        width: 139%;
+    }
+}
+
+@media screen and (min-width:380px) {
+    .containerBanner{
+        font-size: 13px;
+        width: 130%;
+    }
+}
+
+@media screen and (min-width:410px) {
+    .containerBanner{
+        font-size: 13px;
+        width: 123%;
     }
 }
 
@@ -27,23 +48,48 @@
     }
 }
 
+@media screen and (min-width:540px) {
+    .containerBanner{
+        font-size: 14px;
+        margin-left: 21px;
+        width: 120%;
+    }
+
+}
+
+
 @media screen and (min-width:768px) {
     .containerBanner{
     font-size: 22px;
-    margin-left: -12px;
-    width: 102%;
+    width: 122%;
     }
 }
 
-@media screen and (min-width:1023px) {
+@media screen and (min-width:820px) {
+    .containerBanner{
+        font-size: 20px;
+        width: 120%;
+        margin-left: -17px;
+    }
+}
+
+@media screen and (min-width:912px) {
+    .containerBanner{
+        font-size: 20px;
+        width: 122%;
+        margin-left: -66px;
+    }
+}
+
+@media screen and (min-width:1024px) {
     .containerBanner{
         font-size: 18px;
         margin-left: 0px;
-        width: 107%;
+        width: 106%;
     }
 }
 
-@media screen and (min-width:1260px) {
+@media screen and (min-width:1280px) {
     .containerBanner{
         font-size: 20px;
         margin-left: 0px;

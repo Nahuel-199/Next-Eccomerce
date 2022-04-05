@@ -2,6 +2,8 @@ import Link from 'next/link'
 import PaypalBtn from './paypalBtn'
 import {patchData} from '../utils/fetchData'
 import {updateItem} from '../store/Actions'
+import { BsWhatsapp } from "react-icons/bs";
+import styles from "../styles/OrderDetail.module.css";
 
 const OrderDetail = ({orderDetail, state, dispatch}) => {
     const {auth, orders} = state
@@ -31,49 +33,49 @@ const OrderDetail = ({orderDetail, state, dispatch}) => {
             <div key={order._id} style={{margin: '20px auto'}} className="row justify-content-around">
 
                 <div className="text-uppercase my-3" style={{maxWidth: '600px'}}>
-                    <h2 className="text-break">Order {order._id}</h2>
+                    <h2 className="text-break">Orden De Compra {order._id}</h2>
 
                     <div className="mt-4 text-secondary">
-                        <h3>Shipping</h3>
-                        <p>Name: {order.user.name}</p>
+                        <h3>Compra</h3>
+                        <p>Nombre: {order.user.name}</p>
                         <p>Email: {order.user.email}</p>
-                        <p>Address: {order.address}</p>
-                        <p>Mobile: {order.mobile}</p>
+                        <p>Dirección: {order.address}</p>
+                        <p>Celular: {order.mobile}</p>
 
                         <div className={`alert ${order.delivered ? 'alert-success' : 'alert-danger'}
                         d-flex justify-content-between align-items-center`} role="alert">
                             {
-                                order.delivered ? `Deliverd on ${order.updatedAt}` : 'Not Delivered'
+                                order.delivered ? `Entregado en ${order.updatedAt}` : 'No entregado'
                             }
                             {
                                 auth.user.role === "admin" && !order.delivered &&
                                 <button className="btn btn-dark text-uppercase"
                                 onClick={() => handleDelivered(order)}>
-                                    Mark as delivered
+                                    Marcar como entregado
                                 </button>
                             }
                             
                         </div>
 
-                        <h3>Payment</h3>
+                        <h3>Pago</h3>
                         {
-                            order.method && <h6>Method: <em>{order.method}</em></h6>
+                            order.method && <h6>Metodo: <em>{order.method}</em></h6>
                         }
                         
                         {
-                            order.paymentId && <p>PaymentId: <em>{order.paymentId}</em></p>
+                            order.paymentId && <p>PagoId: <em>{order.paymentId}</em></p>
                         }
                         
                         <div className={`alert ${order.paid ? 'alert-success' : 'alert-danger'}
                         d-flex justify-content-between align-items-center`} role="alert">
                             {
-                                order.paid ? `Paid on ${order.dateOfPayment}` : 'Not Paid'
+                                order.paid ? `Pago en ${order.dateOfPayment}` : 'No Pago'
                             }
                             
                         </div>
 
                         <div>
-                            <h3>Order Items</h3>
+                            <h3>Productos De Orden</h3>
                             {
                                 order.cart.map(item => (
                                     <div className="row border-bottom mx-0 p-2 justify-content-betwenn
@@ -104,10 +106,20 @@ const OrderDetail = ({orderDetail, state, dispatch}) => {
                     !order.paid && auth.user.role !== 'admin' &&
                     <div className="p-4">
                         <h2 className="mb-4 text-uppercase">Total: ${order.total}</h2>
-                        <PaypalBtn order={order} />
+                        <h6 className="mb-4 text-secondary">Para proceder a pagar y </h6>
+                        <h6 className="mb-4 text-secondary">conocer nuestros metodos de </h6>
+                        <h6 className="mb-4 text-secondary">envios, contactese con nosotros </h6>
+                        <Link href="https://walink.co/f3b0a9">
+                        
+                        <div className={styles.pulse}> 
+                        <i className='fas fa-phone'></i>
+                           
+                                          </div>
+                                          </Link> 
+                        {/* <PaypalBtn order={order} /> */}
                     </div>
                 }
-               
+               {/* https://walink.co/f3b0a9 */}
             </div>
             ))
         }

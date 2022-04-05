@@ -53,12 +53,12 @@ const Signin = () => {
   return (
     <div>
       <Head>
-        <title>Signin</title>
+        <title>Inicio De Sesión</title>
       </Head>
       <form className="mx-auto my-4" style={{maxWidth: '500px'}} onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="exampleInputEmail1" className="form-label">
-            Email address
+          Correo electrónico
           </label>
           <input
             type="email"
@@ -71,29 +71,29 @@ const Signin = () => {
             onChange={handleChangeInput}
           />
           <div id="emailHelp" className="form-text">
-            We'll never share your email with anyone else.
+          Nunca compartiremos tu correo electrónico con nadie más.
           </div>
         </div>
         <div className="mb-3">
           <label htmlFor="exampleInputPassword1" className="form-label">
-            Password
+           Contraseña
           </label>
           <input
             type="password"
             className="form-control"
             id="exampleInputPassword1"
-            placeholder="Password..."
+            placeholder="Contraseña..."
             name="password"
             value={password}
             onChange={handleChangeInput}
           />
         </div>
         <button type="submit" className="btn btn-dark w-100">
-         Login
+         Iniciar Sesión
         </button>
-        <p className="my-2">You dont have an account? 
+        <p className="my-2">¿No tienes una cuenta? 
           <Link href="/register">
-            <a style={{color: 'crimson'}}> Register Now</a>
+            <a style={{color: 'crimson'}}> Regístrate ahora</a>
             </Link>
             </p>
       </form>

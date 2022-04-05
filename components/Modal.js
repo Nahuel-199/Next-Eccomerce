@@ -71,11 +71,11 @@ const Modal = () => {
                 </button>
             </div>
             <div className="modal-body">
-                Do you want to delete this item?
+            ¿Quieres eliminar este artículo?
             </div>
             <div className="modal-footer">
-                <button type="button" className="btn btn-secondary" data-dismiss="modal" onClick={handleSubmit}>Yes</button>
-                <button type="button" className="btn btn-primary" data-dismiss="modal">Cancel</button>
+                <button type="button" className="btn btn-secondary" data-dismiss="modal" onClick={handleSubmit}>Si</button>
+                <button type="button" className="btn btn-primary" data-dismiss="modal">Cancelar</button>
             </div>
             </div>
         </div>

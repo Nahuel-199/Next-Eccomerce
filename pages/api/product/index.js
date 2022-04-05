@@ -63,7 +63,7 @@ const getProducts = async (req, res) => {
         const products = await features.query
 
         res.json({
-            status: 'success',
+            status: 'éxito',
             result: products.length,
             products
         })
@@ -76,12 +76,12 @@ const getProducts = async (req, res) => {
 const createProduct = async (req, res) => {
     try{
         const result = await auth(req, res)
-       if(result.role !== "admin") return res.status(400).json({err: "Authentication is not valid"})
+       if(result.role !== "admin") return res.status(400).json({err: "La autenticación no es válida"})
 
        const {title, price, color, inStock, description, category, images} = req.body
 
        if(!title || !price || !color || !inStock || !description || category === "all" || images.length === 0)
-       return res.status(400).json({err: "Please add all the fields."})
+       return res.status(400).json({err: "Por favor agregue todos los campos."})
 
 
        const newProduct = new Products({
@@ -90,7 +90,7 @@ const createProduct = async (req, res) => {
 
        await newProduct.save()
 
-       res.json({msg: "Success! Created a product"})
+       res.json({msg: "¡Éxito! Creó un producto"})
 
     }catch (err) {
         return res.status(500).json({err: err.message})

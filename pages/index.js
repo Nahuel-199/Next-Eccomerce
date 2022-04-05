@@ -12,6 +12,7 @@ import Banner from "../components/Banner";
 import Featured from "../components/Featured";
 import Footer from "../components/Footer";
 import NewSletter from "../components/NewSletter"
+import styles from "../styles/casa.module.css"
 
 const Home = (props) => {
 
@@ -52,7 +53,7 @@ const Home = (props) => {
           deleteArr.push({
             data: '', 
             id: product._id, 
-            title: 'Delete all selected products?', 
+            title: '¿Eliminar todos los productos seleccionados?', 
             type: 'DELETE_PRODUCT'
           })
       }
@@ -72,6 +73,7 @@ const Home = (props) => {
     <Head>
       <title>Home</title>
     </Head>
+    <Banner />
      <Filter state={state} />
     <Featured />
 
@@ -86,7 +88,7 @@ const Home = (props) => {
         <button className="btn btn-danger ml-2"
         data-toggle="modal" data-target="#exampleModal"
         onClick={handleDeleteAll}>
-          DELETE ALL
+          ELIMINAR TODOS
         </button>
       </div>
     }
@@ -94,7 +96,7 @@ const Home = (props) => {
     <div className="products">
       {
         products.length === 0 
-        ? <h2>No Products</h2>
+        ? <h2>No Hay Productos</h2>
 
         : products.map(product => (
           <ProductItem key={product._id} product={product} handleCheck={handleCheck} />
@@ -104,9 +106,9 @@ const Home = (props) => {
     
     {
       props.result < page * 6 ? ""
-      : <button className="btn btn-outline-info d-block mx-auto mb-4"
+      : <button className={styles.bton}
       onClick={handleLoadmore}>
-        Load more
+       Cargar más
       </button>
     }
    <NewSletter />

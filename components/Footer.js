@@ -40,7 +40,7 @@ const Footer = () => {
             <br /> 09:00 - 22:00
           </p>
           <p className={styles.text}>
-            VIERNES A DOMINGO
+            VIERNES Y SABADO
             <br /> 10:00 - 21:00
           </p>
         </div>
