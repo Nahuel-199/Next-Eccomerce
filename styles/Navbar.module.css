@@ -11,6 +11,72 @@
     padding: 0.5rem 1rem;
  }  
 
+ @media screen and (min-width:280px) {
+    .containerNav{
+        width: 239%;
+        background-color: currentColor;
+        position: sticky;
+        top: 0;
+        z-index: 99;
+    }
+
+    .logo{
+        width: 70px;
+        margin-left: -251px;
+    }
+
+
+    .icon{
+        margin-left: -16px;
+        color: white;
+    }
+}
+
+
+ @media screen and (min-width:320px) {
+    .containerNav{
+        width: 239%;
+        background-color: currentColor;
+        position: sticky;
+        top: 0;
+        z-index: 99;
+    }
+
+    .logo{
+        width: 64px;
+        margin-left: -428px;
+    }
+
+    .icon{
+        margin-left: -16px;
+        color: white;
+    }
+}
+
+@media screen and (min-width:360px) {
+    .containerNav{
+        width: 141%;
+        background-color: currentColor;
+        position: sticky;
+        top: 0;
+        z-index: 99;
+    }
+
+    .logo{
+        width: 77px;
+        margin-left: -93px;
+        margin-top: -7px;
+    }
+
+    .icon{
+        margin-left: -4px;
+        color: white;
+    }
+}
+
+
+
+
  @media screen and (min-width:375px) {
     .containerNav{
         width: 141%;
@@ -26,28 +92,55 @@
     }
 }
 
-@media screen and (min-width:360px) {
+@media screen and (min-width:412px) {
     .containerNav{
-        width: 141%;
+        width: 134%;
+        background-color: currentColor;
+        position: sticky;
+        top: 0;
+        z-index: 99;
     }
 
     .logo{
-        width: 70px;
-        margin-left: -101px;
+    width: 77px;
+    margin-left: -145px;
+    margin-top: -7px;
     }
 
     .icon{
-        margin-left: -16px;
+        margin-left: -4px;
+        color: white;
+    }
+}
+
+@media screen and (min-width:460px) {
+    .containerNav{
+        width: 144%;
+        background-color: currentColor;
+        position: sticky;
+        top: 0;
+        z-index: 99;
+    }
+
+    .logo{
+    width: 77px;
+    margin-left: -145px;
+    margin-top: -7px;
+    }
+
+    .icon{
+        margin-left: -4px;
+        color: white;
     }
 }
  
  @media screen and (min-width:540px) {
     .containerNav{
-        width: 134%;
+        width: 128%;
     }
     .logo{
-        width: 65px;
-        margin-left: -48%;
+        width: 85px;
+        margin-left: -38%;
     }
 }
 
@@ -63,30 +156,33 @@
 
  @media screen and (min-width:820px) {
     .containerNav{
-        margin-left: -42px;
-        width: 129%;
+        width: 123%;
     }
 
     .logo{
         width: 80px;
-        margin-left: -59%;
+        margin-left: -60%;
     }
 }
 
 @media screen and (min-width:912px) {
     .containerNav{
-        width: 100%;
+        width: 123%;
     }
 
     .logo{
-        width: 80px;
-        margin-left: -45%;
+        width: 137px;
+        margin-left: -10%;
+    }
+    .icon{
+        margin-left: -4px;
+        color: white;
     }
 }
 
 @media screen and (min-width:1024px) {
     .containerNav{
-        width: 110%;
+        width: 123%;
     }
 }
 

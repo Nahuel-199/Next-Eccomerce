@@ -40,6 +40,12 @@
     background-color: teal;
     color: white;
 }
+@media screen and (min-width:280px) {
+    .container{
+        width: 239%;
+    }
+}
+
 
 @media screen and (min-width:320px) {
     .container{
@@ -56,14 +62,14 @@
 
 @media screen and (min-width:390px) {
     .container{
-        width: 130%;
+        width: 141%;
         height: 40vh;
     }
 }
 
-@media screen and (min-width:410px) {
+@media screen and (min-width:412px) {
     .container{
-        width: 123%;
+        width: 134%;
         height: 40vh;
     }
 }
@@ -78,25 +84,34 @@
     }
 }
 
+@media screen and (min-width:460px) {
+    .container{
+        width: 144%;
+        height: 70vh;
+    }
+    
+}
+
+
 @media screen and (min-width:540px) {
     .container{
-        width: 120%;
+        width: 128%;
         height: 50vh;
-        margin-left: 21px;
+        margin-left: 0px;
     }
 }
 
 @media screen and (min-width:768px) {
     .container{
-        width: 127%;
-        height: 50vh;
-        margin-left: -6px;
+        width: 132%;
+    height: 50vh;
+    margin-left: 0px;
     }
 }
 
 @media screen and (min-width:820px) {
     .container{
-        width: 119%;
+        width: 125%;
         height: 50vh;
         margin-left: -15px;
     }
@@ -104,24 +119,24 @@
 
 @media screen and (min-width:912px) {
     .container{
-        width: 125%;
-        height: 38vh;
-        margin-left: -86px;
+        width: 123%;
+    height: 38vh;
+    margin-left: 0;
     }
 }
 
 @media screen and (min-width:1024px) {
     .container{
-        width: 110%;
+        width: 123%;
         height: 75vh;
-        margin-left: -22px;
+        margin-left: 0px;
     }
 }
 @media screen and (min-width:1280px) {
     .container{
-        width: 105%;
+        width: 100%;
         height: 60vh;
-        margin-left: -24px;;
+        margin-left: 0px;;
     }
 }
 

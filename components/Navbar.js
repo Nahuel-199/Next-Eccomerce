@@ -5,6 +5,7 @@ import {DataContext} from '../store/GlobalState'
 import Cookie from 'js-cookie'
 import styles from "../styles/Navbar.module.css";
 import { VscMenu } from "react-icons/vsc";
+import Search from './Search'
 
 function Navbar() {
     const router = useRouter()
@@ -53,7 +54,8 @@ function Navbar() {
     const loggedRouter = () => {
         return(
             <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" 
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style={{ color: "white"}}>
                     <img src={auth.user.avatar} alt={auth.user.avatar} 
                     style={{
                         borderRadius: '50%', width: '30px', height: '30px',
@@ -64,14 +66,14 @@ function Navbar() {
                 <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <Link href="/profile">
 
-                        <a className="dropdown-item">Perfil</a>
+                        <a className="dropdown-item" style={{ color: "black"}}>Perfil</a>
 
                     </Link>
                     {
                         auth.user.role === 'admin' && adminRouter()
                     }
                     <div className="dropdown-divider"></div>
-                    <button className="dropdown-item" onClick={handleLogout}>Cerrar Sesion</button>
+                    <button className="dropdown-item" onClick={handleLogout} style={{ color: "black"}}>Cerrar Sesion</button>
                 </div>
             </li>
         )
@@ -85,11 +87,11 @@ function Navbar() {
                                         letterSpacing: "10px",
                                         fontWeight: "600",
                                         fontFamily: "'Urbanist', sans-serif",
-                                        color: "#4a3b76"
+                                        color: "#e5a900"
                                     }}>SUBLI FOX</a>
             </Link>
             <img className={styles.logo} src='img/logoFox.png' />
-            <button className="navbar-toggler" style={{ width: "6%" }} type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <button className="navbar-toggler" style={{ width: "10%" }} type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <VscMenu className={styles.icon} style={{ fontSize: "29px"}}></VscMenu>
             </button>
             <div className="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
@@ -97,7 +99,7 @@ function Navbar() {
                     <li className="nav-item">
                         <Link href="/cart">
                             <a className={"nav-link" + isActive('/cart')}>
-                                <i className="fas fa-shopping-cart position-relative" aria-hidden="true">
+                                <i className="fas fa-shopping-cart position-relative" aria-hidden="true" style={{ color: "white"}}>
                                     <span className="position-absolute"
                                     style={{
                                         padding: '3px 6px',
@@ -106,11 +108,13 @@ function Navbar() {
                                         top: '-10px',
                                         right: '-10px',
                                         color: 'white',
-                                        fontSize: '14px'
+                                        fontSize: '14px',
+                                        color: 'white'
                                     }}>
                                         {cart.length}
                                     </span>
-                                </i> Carrito
+                                </i>
+                                <span style={{color: "white", marginLeft: "10px"}}>Carrito</span> 
                             </a>
                         </Link>
                     </li>
@@ -120,7 +124,8 @@ function Navbar() {
                         ? <li className="nav-item">
                             <Link href="/signin">
                                 <a className={"nav-link" + isActive('/signin')}>
-                                    <i className="fas fa-user" aria-hidden="true"></i> Iniciar Sesion
+                                    <i className="fas fa-user" aria-hidden="true"></i> 
+                                    <span style={{color: "white", marginLeft: "10px"}}>Iniciar Sesion</span> 
                                 </a>
                             </Link>
                         </li>
@@ -128,7 +133,9 @@ function Navbar() {
                     }
                 </ul>
             </div>
+            <Search />
         </nav>
+      
     )
 }
 

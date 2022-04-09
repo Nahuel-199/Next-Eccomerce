@@ -1,11 +1,10 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import filterSearch from '../utils/filterSearch'
-import {getData} from '../utils/fetchData'
 import {useRouter} from 'next/router'
 import styles from "../styles/Filtros.module.css";
 
 const Filter = ({state}) => {
-    const [search, setSearch] = useState('')
+    // const [search, setSearch] = useState('')
     const [sort, setSort] = useState('')
     const [category, setCategory] = useState('')
 
@@ -24,9 +23,6 @@ const Filter = ({state}) => {
         filterSearch({router, sort: e.target.value})
     }
 
-    useEffect(() => {
-        filterSearch({router, search: search ? search.toLowerCase() : 'all'})
-    },[search])
 
     return (
         <div className={styles.containerFil}>
@@ -43,12 +39,6 @@ const Filter = ({state}) => {
                     }
                 </select>
             </div>
-
-            <form autoComplete="off" className="mt-2 col-md-8 px-0">
-                <input type="text" className="form-control" list="title_product"
-                placeholder='Busque el producto por su nombre....'
-                value={search.toLowerCase()} onChange={e => setSearch(e.target.value)} />
-            </form>
 
             <div className="input-group-prepend col-md-2 px-0 mt-2">
                 <select className="custom-select text-capitalize"

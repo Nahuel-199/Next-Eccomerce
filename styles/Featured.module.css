@@ -28,8 +28,14 @@
     height: 100%;
     position: relative;
 }
+@media screen and (max-width:280px) {
+    .container{
+     display: none;
+    }
+ }
 
-@media screen and (min-width:360px) {
+
+@media screen and (min-width:320px) {
     .container{
         width: 108%;
         height: 35vh;
@@ -37,19 +43,45 @@
     }
  }
 
- @media screen and (min-width:390px) {
+@media screen and (min-width:360px) {
     .container{
-        width: 108%;
-        height: 35vh;
-        margin-left: 11%;
+        width: 100%;
+        height: 31vh;
+        margin-left: 22%;
     }
  }
 
- @media screen and (min-width:410px) {
+ @media screen and (min-width:375px) {
     .container{
-        width: 108%;
+        width: 100%;
         height: 35vh;
-        margin-left: 8%;
+        margin-left: 22%;
+    }
+ }
+
+ @media screen and (min-width:390px) {
+    .container{
+        width: 100%;
+        height: 31vh;
+        margin-left: 22%;
+    }
+ }
+
+ @media screen and (min-width:412px) {
+    .container{
+        width: 100%;
+        height: 29vh;
+        margin-left: 16%;
+        margin-top: 0px;
+    }
+ }
+
+ @media screen and (min-width:460px) {
+    .container{
+        width: 100%;
+        height: 46vh;
+        margin-left: 23%;
+        margin-top: 10px;
     }
  }
 
@@ -71,9 +103,9 @@
 
 @media screen and (min-width:768px) {
     .container{
-        width: 112%;
-        height: 38vh;
-        margin-left: 9%;
+        width: 100%;
+        height: 37vh;
+        margin-left: 17%;
         margin-top: 30px;
     }
     .wrapper{
@@ -84,27 +116,27 @@
 
 @media screen and (min-width:820px) {
     .container{
-        width: 118%;
-        height: 38vh;
-        margin-left: -2%;
-        margin-top: 30px;
+        width: 100%;
+        height: 34vh;
+        margin-left: 12%;
+        margin-top: 25px;
     }
  }
 
  @media screen and (min-width:912px) {
     .container{
-        width: 125%;
-    height: 38vh;
-    margin-left: -12%;
-    margin-top: 30px;
+        width: 100%;
+        height: 33vh;
+        margin-left: 11%;
+        margin-top: 30px;
     }
  }
 
  @media screen and (min-width:1024px) {
     .container{
-        width: 109%;
+        width: 100%;
         height: 85vh;
-        margin-left: -2%;
+        margin-left: 11%;
         margin-top: 30px;
     }
  }
@@ -112,8 +144,8 @@
  @media screen and (min-width:1280px) {
     .container{
         width: 100%;
-        height: 80vh;
-        margin-left: 0%;
+        height: 69vh;
+        margin-left: -8px;
         margin-top: 20px;
     }
  }

@@ -1,0 +1,189 @@
+.container{
+    height: 60vh;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title{
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.inputContainer{
+    width: 76%;
+    height: 260px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+@media screen and (min-width:280px) {
+    .container{
+        width: 239%;
+        margin-bottom: 10px;
+        height: 45vh;
+        margin-top: 30px;
+    }
+    .title{
+        margin-left: 15px;
+    }
+    .img{
+        width: 32rem;
+        height: 240px;
+        margin-left: 12px;
+    }
+}
+
+
+@media screen and (min-width:360px) {
+    .container{
+        width: 141%;
+        margin-bottom: 10px;
+        height: 45vh;
+        margin-top: 30px;
+    }
+    .img{
+        width: 24rem;
+        height: 226px; 
+    }
+}
+
+
+@media screen and (min-width:412px) {
+    .container{
+        width: 134%;
+        height: 40vh;
+    }
+    .title{
+        margin-left: 10px;
+    }
+    .img{
+        width: 24rem;
+        height: 226px; 
+        margin-left: 7%;
+    }
+}
+
+@media screen and (min-width:460px) {
+    .container{
+        width: 144%;
+        height: 55vh;
+    }
+    .title{
+        margin-left: 10px;
+    }
+    .img{
+        width: 24rem;
+        height: 226px; 
+        margin-left: 14%;
+    }
+}
+
+@media screen and (min-width:540px) {
+    .container{
+        width: 128%;
+        margin-bottom: 10px;
+        height: 45vh;
+        margin-top: 30px;
+    }
+    .title{
+        margin-left: 4%;
+    }
+    .img{
+        width: 33rem;
+        height: 263px;
+        margin-left: 12px;
+    }
+}
+
+
+@media screen and (min-width:768px) {
+    .container{
+        width: 132%;
+        height: 40vh;
+    }
+    .img{
+        width: 32rem;
+        height: 295px;
+        margin-left: 18%;
+    }
+
+    .title{
+        margin-left: 10px;
+    }
+}
+
+@media screen and (min-width:820px) {
+    .container{
+        width: 123%;
+        height: 40vh;
+    }
+
+    .title{
+        font-size: 51px;
+    }
+
+    .img{
+        width: 40rem;
+        height: 300px;
+        margin-left: 9%;
+    }
+}
+
+@media screen and (min-width:912px) {
+    .container{
+        width: 123%;
+        height: 40vh;
+    }
+
+    .title{
+        font-size: 58px;
+        margin-left: 15px;
+    }
+
+    .img{
+        width: 47rem;
+        height: 372px;
+        margin-left: 9%;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .container{
+        width: 123%;
+        height: 93vh;
+    }
+
+    .title{
+        font-size: 58px;
+        margin-left: 15px;
+    }
+
+    .img{
+        width: 47rem;
+        height: 372px;
+        margin-left: 12%;
+    }
+}
+
+@media screen and (min-width:1280px) {
+    .container{
+        width: 100%;
+        height: 75vh;
+    }
+
+    .title{
+        font-size: 65px;
+    margin-left: 65px;
+    }
+
+    .img{
+        width: 40rem;
+        height: 255px;
+        margin-left: 19%;
+    }
+}

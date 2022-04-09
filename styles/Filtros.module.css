@@ -9,6 +9,22 @@
     width: 100%;
 }
 
+@media screen and (min-width:280px) {
+    .containerFil{
+        width: 206%;
+        margin-left: 17%;
+        margin-top: 5px;
+    }
+ }
+
+@media screen and (min-width:320px) {
+    .containerFil{
+        width: 206%;
+        margin-left: 17%;
+        margin-top: 5px;
+    }
+ }
+
 @media screen and (min-width:360px) {
     .containerFil{
         width: 108%;
@@ -18,15 +34,22 @@
 
  @media screen and (min-width:390px) {
     .containerFil{
-        width: 108%;
-        margin-left: 11%;
+        width: 100%;
+        margin-left: 22%;
     }
  }
 
- @media screen and (min-width:410px) {
+ @media screen and (min-width:412px) {
     .containerFil{
         width: 108%;
-        margin-left: 8%;
+        margin-left: 13%;
+    }
+ }
+
+ @media screen and (min-width:460px) {
+    .containerFil{
+        width: 100%;
+        margin-left: 23%;
     }
  }
 
@@ -47,37 +70,37 @@
 
  @media screen and (min-width:768px) {
     .containerFil{
-        width: 116%;
-        margin-left: 6%;
+        width: 81%;
+        margin-left: 51%;
         margin-top: 15px;
     }
  }
 
  @media screen and (min-width:820px) {
     .containerFil{
-        width: 116%;
-        margin-left: -1%;
+        width: 76%;
+        margin-left: 47%;
     }
- }
+    }
+
 
  @media screen and (min-width:912px) {
     .containerFil{
-        width: 110%;
-        margin-left: -22px;
+        width: 76%;
     }
  }
 
  @media screen and (min-width:1024px) {
     .containerFil{
-        width: 107%;
-        margin-left: -4px;
+        width: 71%;
+        margin-left: 505px;
     }
  }
 
 
  @media screen and (min-width:1280px) {
     .containerFil{
-        width: 100%;
-        margin-left: 2px;
+        width: 57%;
+    margin-left: 43%;
     }
  }

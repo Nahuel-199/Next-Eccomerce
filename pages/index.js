@@ -13,6 +13,7 @@ import Featured from "../components/Featured";
 import Footer from "../components/Footer";
 import NewSletter from "../components/NewSletter"
 import styles from "../styles/casa.module.css"
+import MetodosPagos from "../components/MetodosPagos"
 
 const Home = (props) => {
 
@@ -69,13 +70,16 @@ const Home = (props) => {
  
 
   return (
-    <div className="home_page">
+    <div className={styles.home_page}>
     <Head>
       <title>Home</title>
     </Head>
     <Banner />
-     <Filter state={state} />
+    
+   
     <Featured />
+
+    <Filter state={state} />
 
    
 
@@ -105,13 +109,14 @@ const Home = (props) => {
     </div>
     
     {
-      props.result < page * 6 ? ""
+      props.result < page * 8 ? ""
       : <button className={styles.bton}
       onClick={handleLoadmore}>
        Cargar más
       </button>
     }
    <NewSletter />
+   <MetodosPagos />
     <Footer />
   </div>
 
@@ -127,7 +132,7 @@ export async function getServerSideProps({query}) {
   const search = query.search || 'all'
 
   const res = await getData(
-    `product?limit=${page * 6}&category=${category}&sort=${sort}&title=${search}`
+    `product?limit=${page * 8}&category=${category}&sort=${sort}&title=${search}`
   )
   // server side rendering
   return {
