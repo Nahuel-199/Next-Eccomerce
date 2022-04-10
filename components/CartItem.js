@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { decrease, increase } from '../store/Actions'
+import { RiDeleteBin6Line } from "react-icons/ri";
 
 const CartItem = ({item, dispatch, cart}) => {
     return(
@@ -38,12 +39,12 @@ const CartItem = ({item, dispatch, cart}) => {
         </td>
 
         <td className="align-middle" style={{minWidth: '50px', cursor: 'pointer'}}>
-                <i className="far fa-trash-alt text-danger" aria-hidden="true" 
-                style={{fontSize: '18px'}} data-toggle="modal" data-target="#exampleModal"
+                <RiDeleteBin6Line className="far fa-trash-alt text-danger" aria-hidden="true" 
+                style={{fontSize: '25px'}} data-toggle="modal" data-target="#exampleModal"
                 onClick={() => dispatch({
                     type: 'ADD_MODAL',
                     payload: [{ data: cart, id: item._id, title: item.title, type: 'ADD_CART' }]
-                })} ></i>
+                })} ></RiDeleteBin6Line>
             </td>
     </tr>
     )

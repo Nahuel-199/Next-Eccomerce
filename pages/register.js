@@ -5,6 +5,7 @@ import valid from"../utils/valid";
 import { DataContext } from "../store/GlobalState";
 import { postData } from "../utils/fetchData"
 import { useRouter } from 'next/router'
+import styles from "../styles/Registro.module.css";
 
 const Register = () => {
   const initialState = { name: '', email: '', password: '', cf_password: '' }
@@ -42,7 +43,7 @@ const Register = () => {
 }, [auth])
 
   return (
-    <div>
+    <div className={styles.regis}>
       <Head>
         <title>Registrarse</title>
       </Head>

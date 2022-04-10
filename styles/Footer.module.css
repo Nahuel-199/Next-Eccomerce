@@ -203,9 +203,9 @@
     .container{
         height: auto;
         text-align: center;
-        width: 124%;
+        width: 128%;
     margin-top: 0px;
-    margin-left: 21px;
+    margin-left: 0px;
     }
    .item:first-child{
        display: none;

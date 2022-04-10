@@ -17,7 +17,7 @@ const DetailProduct = (props) => {
     }
 
     return(
-        <div className="row detail_page">
+        <div className="row detail_page" style={{width: "100%"}}>
             <Head>
                 <title>Detalle Producto</title>
             </Head>

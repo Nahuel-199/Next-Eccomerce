@@ -87,7 +87,7 @@ const Profile = () => {
 
     if(!auth.user) return null;
     return( 
-        <div className="profile_page">
+        <div className="profile_page" style={{ width: "98%"}}>
             <Head>
                 <title>Perfil</title>
             </Head>

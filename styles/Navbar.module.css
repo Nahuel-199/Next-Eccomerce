@@ -11,6 +11,16 @@
     padding: 0.5rem 1rem;
  }  
 
+ .ulCart{
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    list-style: none;
+ }
+
  @media screen and (min-width:280px) {
     .containerNav{
         width: 239%;
@@ -21,13 +31,18 @@
     }
 
     .logo{
-        width: 70px;
-        margin-left: -251px;
+        width: 80px;
+        margin-left: -37px;
+    }
+    .ulCart{
+        margin-left: 37%;
+    }
+    .spanCart{
+        display: none;
     }
 
-
     .icon{
-        margin-left: -16px;
+        margin-left: -15px;
         color: white;
     }
 }
@@ -63,14 +78,18 @@
     }
 
     .logo{
-        width: 77px;
-        margin-left: -93px;
-        margin-top: -7px;
+        width: 70px;
+        margin-left: -45px;
+    }
+    .ulCart{
+        margin-left: 22%;
+    }
+    .spanCart{
+        display: none;
     }
 
     .icon{
-        margin-left: -4px;
-        color: white;
+        margin-left: -15px;
     }
 }
 
@@ -84,11 +103,17 @@
 
     .logo{
         width: 70px;
-        margin-left: -101px;
+        margin-left: -45px;
+    }
+    .ulCart{
+        margin-left: 22%;
+    }
+    .spanCart{
+        display: none;
     }
 
     .icon{
-        margin-left: -16px;
+        margin-left: -15px;
     }
 }
 
@@ -102,14 +127,18 @@
     }
 
     .logo{
-    width: 77px;
-    margin-left: -145px;
-    margin-top: -7px;
+        width: 70px;
+        margin-left: -45px;
+    }
+    .ulCart{
+        margin-left: 22%;
+    }
+    .spanCart{
+        display: none;
     }
 
     .icon{
-        margin-left: -4px;
-        color: white;
+        margin-left: -15px;
     }
 }
 
@@ -139,8 +168,18 @@
         width: 128%;
     }
     .logo{
-        width: 85px;
-        margin-left: -38%;
+        width: 70px;
+        margin-left: -45px;
+    }
+    .ulCart{
+        margin-left: 35%
+    }
+    .spanCart{
+        display: none;
+    }
+
+    .icon{
+        margin-left: -12px;
     }
 }
 
@@ -149,8 +188,18 @@
         width: 132%;
     }
     .logo{
-        width: 80px;
-        margin-left: -59%;
+        width: 85px;
+        margin-left: -50px;
+    }
+    .ulCart{
+        margin-left: 56%;
+    }
+    .spanCart{
+        display: none;
+    }
+
+    .icon{
+        margin-left: -5px;
     }
 }
 
@@ -160,8 +209,18 @@
     }
 
     .logo{
-        width: 80px;
-        margin-left: -60%;
+        width: 85px;
+        margin-left: -50px;
+    }
+    .ulCart{
+        margin-left: 56%;
+    }
+    .spanCart{
+        display: none;
+    }
+
+    .icon{
+        margin-left: -5px;
     }
 }
 
@@ -171,18 +230,39 @@
     }
 
     .logo{
-        width: 137px;
-        margin-left: -10%;
+        width: 85px;
+        margin-left: -50px;
     }
+    .ulCart{
+        margin-left: 56%;
+    }
+    .spanCart{
+        display: none;
+    }
+
     .icon{
-        margin-left: -4px;
-        color: white;
+        margin-left: 0px;
     }
 }
 
 @media screen and (min-width:1024px) {
     .containerNav{
         width: 123%;
+    }
+    
+    .logo{
+        width: 110px;
+        margin-left: -45px;
+    }
+    .ulCart{
+        margin-left: 60%;
+    }
+    .spanCart{
+        display: initial;
+    }
+
+    .icon{
+        margin-left: 0px;
     }
 }
 
@@ -192,11 +272,44 @@
     }
 
     .logo{
-       display: none;
+        margin-left: -5%;
+        width: 8%;
+    }
+   
+    .ulCart{
+        margin-left: 59%;
+    }
+/* 
+    .btn{
+        display: none;
     }
 
     .icon{
-        margin-left: -2px;
+        display: none;
+    } */
+    .cart{
+        margin-left: -80%;
+        margin-top: 16px;
+        width: 80px;
+    }
+
+    .user{
+        width: 116px;
+        margin-top: -42px;
+    }
+
+    .userName{
+        margin-top: -42px;
+    }
+
+    .spanC{
+        display: contents;
+        margin-left: 10px;
+    }
+
+    .spanU{
+        display: contents;
+        margin-left: 10px;
     }
 }
     

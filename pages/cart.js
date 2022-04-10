@@ -5,6 +5,7 @@ import CartItem from "../components/CartItem"
 import Link from "next/link"
 import { getData, postData } from '../utils/fetchData'
 import { useRouter } from "next/router"
+import styles from "../styles/CarItem.module.css";
 
 
 const Cart = () => {
@@ -100,8 +101,7 @@ const Cart = () => {
 
   
   if( cart.length === 0 )
-  return <img className="img-responsive" src="/carritoVacio.png" alt="not empty"
-  style={{width: "30%", marginLeft: "38%", marginTop: "100px"}} />
+  return <img className={styles.imageCart} src="/carritoVacio.png" alt="not empty"/>
 
   return (
     <div className="row mx-auto">
@@ -140,7 +140,7 @@ const Cart = () => {
 
               <label htmlFor="address">Dirección</label>
               <input type="text" name="address" id="address"
-              className="form-control mb-2" value={address}
+              className="form-control mb-3" value={address}
               onChange={e => setAddress(e.target.value)}
               />
 

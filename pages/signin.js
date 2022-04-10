@@ -5,6 +5,7 @@ import { DataContext } from "../store/GlobalState";
 import { postData } from "../utils/fetchData"
 import Cookie from "js-cookie"
 import { useRouter } from "next/router"
+import styles from "../styles/Sign.module.css";
 
 const Signin = () => {
   const initialState = { email: '', password: '' }
@@ -51,7 +52,7 @@ const Signin = () => {
   }, [auth])
 
   return (
-    <div>
+    <div className={styles.sign}>
       <Head>
         <title>Inicio De Sesión</title>
       </Head>

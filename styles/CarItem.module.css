@@ -1,0 +1,97 @@
+@media screen and (min-width:280px) {
+    .imageCart{
+        width: 100%;
+        margin-left: 70%;
+    margin-top: 100px;
+    }
+}
+
+
+ @media screen and (min-width:320px) {
+    .imageCart{
+        width: 67%;
+        margin-left: 38%;
+    margin-top: 100px;
+    }
+}
+
+@media screen and (min-width:360px) {
+    .imageCart{
+        width: 67%;
+        margin-left: 38%;
+    margin-top: 100px;
+    }
+}
+
+@media screen and (min-width:375px) {
+    .imageCart{
+        width: 67%;
+        margin-left: 38%;
+    margin-top: 100px;
+    }
+}
+
+@media screen and (min-width:412px) {
+    .imageCart{
+        width: 75%;
+        margin-left: 29%;
+    margin-top: 100px;
+    }
+}
+
+@media screen and (min-width:460px) {
+    .imageCart{
+        width: 67%;
+        margin-left: 38%;
+    margin-top: 100px;
+    }
+}
+ 
+ @media screen and (min-width:540px) {
+    .imageCart{
+        width: 55%;
+        margin-left: 38%;
+    margin-top: 100px;
+    }
+}
+
+ @media screen and (min-width:768px) {
+    .imageCart{
+        width: 60%;
+        margin-left: 38%;
+    margin-top: 100px;
+    }
+}
+
+ @media screen and (min-width:820px) {
+    .imageCart{
+        width: 50%;
+        margin-left: 38%;
+    margin-top: 100px;
+    }
+}
+
+@media screen and (min-width:912px) {
+    .imageCart{
+        width: 55%;
+        margin-left: 38%;
+    margin-top: 100px;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .imageCart{
+        width: 40%;
+        margin-left: 45%;
+    margin-top: 100px;
+    }
+}
+
+@media screen and (min-width:1280px) {
+    .imageCart{
+        width: 26%;
+        margin-left: 39%;
+    margin-top: 100px;
+    }
+}
+

@@ -12,7 +12,7 @@
     margin-bottom: 20px;
 }
 
-.inputContainer{
+.container2{
     width: 76%;
     height: 260px;
     background-color: white;
@@ -20,17 +20,61 @@
     justify-content: space-between;
 }
 
+.iconContainer{
+    display: flex;
+width: 30%;
+justify-content: space-around;
+margin-top: 10px;
+margin-left: 30px;
+}
+
+.icon{
+    display: inline-block;
+    font-size: 44px;
+    animation: float 5s ease-in-out infinite;
+    cursor: pointer;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 
 @media screen and (min-width:280px) {
     .container{
         width: 239%;
         margin-bottom: 10px;
-        height: 45vh;
+        height: 70vh;
         margin-top: 30px;
     }
     .title{
         margin-left: 15px;
     }
+
+    .container2{
+        width: 65%;
+        margin-bottom: 10px;
+        height: 20vh;
+        margin-top: 30px;
+    }
+    .title2{
+        margin-left: 170px
+    }
+    .iconContainer{
+        width: 100%;
+        margin-left: -60%;
+        margin-top: 70px;
+    }
+
+    
     .img{
         width: 32rem;
         height: 240px;
@@ -43,12 +87,26 @@
     .container{
         width: 141%;
         margin-bottom: 10px;
-        height: 45vh;
+        height: 65vh;
         margin-top: 30px;
     }
     .img{
         width: 24rem;
         height: 226px; 
+    }
+    .container2{
+        width: 65%;
+        margin-bottom: 10px;
+        height: 20vh;
+        margin-top: 30px;
+    }
+    .title2{
+        margin-left: 115px
+    }
+    .iconContainer{
+        width: 100%;
+        margin-left: -60%;
+        margin-top: 70px;
     }
 }
 
@@ -56,15 +114,18 @@
 @media screen and (min-width:412px) {
     .container{
         width: 134%;
-        height: 40vh;
+        height: 50vh;
     }
     .title{
         margin-left: 10px;
     }
+    .title2{
+        margin-left: 134px
+    }
     .img{
         width: 24rem;
         height: 226px; 
-        margin-left: 7%;
+        margin-left: 1%;
     }
 }
 
@@ -87,11 +148,14 @@
     .container{
         width: 128%;
         margin-bottom: 10px;
-        height: 45vh;
+        height: 64vh;
         margin-top: 30px;
     }
     .title{
         margin-left: 4%;
+    }
+    .title2{
+        margin-left: 38%;
     }
     .img{
         width: 33rem;
@@ -104,40 +168,54 @@
 @media screen and (min-width:768px) {
     .container{
         width: 132%;
-        height: 40vh;
+        height: 52vh;
     }
     .img{
         width: 32rem;
         height: 295px;
-        margin-left: 18%;
+        margin-left: 2%;
     }
 
     .title{
         margin-left: 10px;
+    }
+    .title2{
+        margin-left: 44%;
+     }
+     .iconContainer{
+        width: 93%;
+        
     }
 }
 
 @media screen and (min-width:820px) {
     .container{
         width: 123%;
-        height: 40vh;
+        height: 50vh;
     }
 
     .title{
         font-size: 51px;
     }
+     .title2{
+        margin-left: 44%;
+     }
+     .iconContainer{
+        width: 93%;
+        
+    }
 
     .img{
         width: 40rem;
         height: 300px;
-        margin-left: 9%;
+        margin-left: 4%;
     }
 }
 
 @media screen and (min-width:912px) {
     .container{
         width: 123%;
-        height: 40vh;
+        height: 50vh;
     }
 
     .title{
@@ -148,14 +226,14 @@
     .img{
         width: 47rem;
         height: 372px;
-        margin-left: 9%;
+        margin-left: 5%;
     }
 }
 
 @media screen and (min-width:1024px) {
     .container{
         width: 123%;
-        height: 93vh;
+        height: 100vh;
     }
 
     .title{
@@ -166,7 +244,7 @@
     .img{
         width: 47rem;
         height: 372px;
-        margin-left: 12%;
+        margin-left: 3%;
     }
 }
 
@@ -184,6 +262,12 @@
     .img{
         width: 40rem;
         height: 255px;
-        margin-left: 19%;
+        margin-left: 3%;
     }
+
+    .title2{
+        margin-left: 47%;
+    }
+
+    
 }

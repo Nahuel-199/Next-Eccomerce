@@ -76,6 +76,7 @@ const Home = (props) => {
     </Head>
     <Banner />
     
+    
    
     <Featured />
 
@@ -107,6 +108,7 @@ const Home = (props) => {
         ))
       }
     </div>
+   
     
     {
       props.result < page * 8 ? ""
@@ -115,6 +117,7 @@ const Home = (props) => {
        Cargar más
       </button>
     }
+
    <NewSletter />
    <MetodosPagos />
     <Footer />

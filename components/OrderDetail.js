@@ -1,8 +1,8 @@
 import Link from 'next/link'
-import PaypalBtn from './paypalBtn'
+// import PaypalBtn from './paypalBtn'
 import {patchData} from '../utils/fetchData'
 import {updateItem} from '../store/Actions'
-import { BsWhatsapp } from "react-icons/bs";
+import { BsFillTelephoneFill } from "react-icons/bs";
 import styles from "../styles/OrderDetail.module.css";
 
 const OrderDetail = ({orderDetail, state, dispatch}) => {
@@ -107,12 +107,13 @@ const OrderDetail = ({orderDetail, state, dispatch}) => {
                     <div className="p-4">
                         <h2 className="mb-4 text-uppercase">Total: ${order.total}</h2>
                         <h6 className="mb-4 text-secondary">Para proceder a pagar y </h6>
-                        <h6 className="mb-4 text-secondary">conocer nuestros metodos de </h6>
+                        <h6 className="mb-4 text-secondary">conocer nuestros metodos de pago y </h6>
                         <h6 className="mb-4 text-secondary">envios, contactese con nosotros </h6>
                         <Link href="https://walink.co/f3b0a9">
                         
                         <div className={styles.pulse}> 
-                        <i className='fas fa-phone'></i>
+                        <BsFillTelephoneFill style={{color: "white", fontSize: "30px", marginTop: "-5px"}}>
+                        </BsFillTelephoneFill>
                            
                                           </div>
                                           </Link> 

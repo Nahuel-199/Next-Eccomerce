@@ -5,6 +5,8 @@ import {DataContext} from '../store/GlobalState'
 import Cookie from 'js-cookie'
 import styles from "../styles/Navbar.module.css";
 import { VscMenu } from "react-icons/vsc";
+import { BsCart3 } from "react-icons/bs";
+import { FaUserAlt } from "react-icons/fa";
 import Search from './Search'
 
 function Navbar() {
@@ -91,40 +93,41 @@ function Navbar() {
                                     }}>SUBLI FOX</a>
             </Link>
             <img className={styles.logo} src='img/logoFox.png' />
-            <button className="navbar-toggler" style={{ width: "10%" }} type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <VscMenu className={styles.icon} style={{ fontSize: "29px"}}></VscMenu>
-            </button>
-            <div className="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-                <ul className="navbar-nav p-1">
+            <ul className={styles.ulCart}>
                     <li className="nav-item">
                         <Link href="/cart">
                             <a className={"nav-link" + isActive('/cart')}>
-                                <i className="fas fa-shopping-cart position-relative" aria-hidden="true" style={{ color: "white"}}>
-                                    <span className="position-absolute"
+                                <BsCart3 style={{ color: "white", position: "relative"}}></BsCart3>
+                                <span className="position-absolute"
                                     style={{
                                         padding: '3px 6px',
                                         background: '#ed143dc2',
                                         borderRadius: '50%',
-                                        top: '-10px',
-                                        right: '-10px',
+                                        top: '12px',
+                                        marginLeft: '-8px',
                                         color: 'white',
                                         fontSize: '14px',
                                         color: 'white'
                                     }}>
                                         {cart.length}
                                     </span>
-                                </i>
-                                <span style={{color: "white", marginLeft: "10px"}}>Carrito</span> 
+                                <span className={styles.spanCart} style={{color: "white", marginLeft: "10px"}}>Carrito</span> 
                             </a>
                         </Link>
                     </li>
+                    </ul>
+            <button className="navbar-toggler" style={{ width: "5%" }} type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <VscMenu className={styles.icon} style={{ fontSize: "29px"}}></VscMenu>
+            </button>
+            <div className="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul className="navbar-nav p-1">
                     
                     {
                         Object.keys(auth).length === 0 
                         ? <li className="nav-item">
                             <Link href="/signin">
                                 <a className={"nav-link" + isActive('/signin')}>
-                                    <i className="fas fa-user" aria-hidden="true"></i> 
+                                    <FaUserAlt  aria-hidden="true" style={{ color: "white"}}></FaUserAlt> 
                                     <span style={{color: "white", marginLeft: "10px"}}>Iniciar Sesion</span> 
                                 </a>
                             </Link>

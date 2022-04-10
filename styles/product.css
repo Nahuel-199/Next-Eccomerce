@@ -66,7 +66,13 @@
 @media screen and (min-width:360px) {
     .products{
         width: 100%;
-        margin-left: 22%;
+        margin-left: 24%;
+    }
+    .products .card{
+        margin-bottom: 15px;
+        width: 28rem;
+        margin-left: -47px;
+    
     }
     }
 
@@ -74,6 +80,12 @@
         .products{
             width: 100%;
             margin-left: 22%;
+        }
+        .products .card{
+            margin-bottom: 15px;
+            width: 28rem;
+            margin-left: -31px;
+        
         }
     }
 
@@ -84,6 +96,9 @@
             }
             .products .card{
                 margin-bottom: 15px;
+                width: 28rem;
+                margin-left: -15px;
+            
             }
          }
          @media screen and (min-width:460px) {
@@ -105,12 +120,20 @@
         margin-left: 5px;
         width: 126%;
     }
+    .products .card{
+        width: 18rem;
+        margin-left: 8%;
+    }
    }
 
    @media screen and (min-width:768px) {
     .products{
         width: 129%;
         margin-left: 12px;
+    }
+    .products .card{
+        width: 18rem;
+        margin-left: 6%;
     }
 
 }
@@ -120,13 +143,21 @@
         width: 115%;
     margin-left: 33px;
 }
-    }
+.products .card{
+       width: 18rem;
+       margin-left: 6%;
+  }
+   }
 
 
 @media screen and (min-width:912px) {
     .products{
         width: 122%;
         margin-left: 6px;
+    }
+    .products .card{
+        width: 18rem;
+        margin-left: 11%;
     }
 }
 
@@ -135,11 +166,19 @@
         width: 122%;
         margin-left: 5px;
     }
+    .products .card{
+        width: 18rem;
+        margin-left: 4%;
+    }
 }
 
 @media screen and (min-width:1280px) {
     .products{
         width: 100%;
         margin-left: 0px;
+    }
+    .products .card{
+        width: 18rem;
+        margin-left: 4%
     }
 }
