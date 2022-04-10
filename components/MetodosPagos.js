@@ -13,10 +13,8 @@ const MetodosPagos = () => {
      <div className={styles.container2}>
       <h1 className={styles.title2}>Redes</h1>
       <div className={styles.iconContainer}>
-        <Link href="https://walink.co/17bbcd">
-          <>
+          <Link href="https://walink.co/17bbcd">
             <BsWhatsapp style={{color: "green"}} className={styles.icon} />
-            </>
             </Link>
             <Link href="https://www.facebook.com/profile.php?id=100072559574435">
             <BsFacebook style={{animationDelay: "1s", color: "blue"}} className={styles.icon} />

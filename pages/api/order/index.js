@@ -50,7 +50,7 @@ const createOrder = async (req, res) => {
          await newOrder.save()
 
          res.json({
-             msg: "Pedido exitoso! Nos pondremos en contacto contigo para confirmar el pedido.",
+             msg: "Pedido exitoso! Proceda a comunicarse con nosotros.",
              newOrder
             })
 
