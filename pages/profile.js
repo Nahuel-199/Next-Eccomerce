@@ -2,6 +2,8 @@ import Head from 'next/head'
 import { useState, useContext, useEffect } from 'react'
 import { DataContext } from '../store/GlobalState'
 import Link from 'next/link'
+import { AiOutlineClose } from "react-icons/ai";
+import { BsCheckLg } from "react-icons/bs";
 
 import valid from '../utils/valid'
 import { patchData } from '../utils/fetchData'
@@ -170,15 +172,15 @@ const Profile = () => {
                                         <td className='p-2'>
                                             {
                                                 order.delivered
-                                                ? <i className='fas fa-check text-success'></i>
-                                                : <i className='fas fa-times text-danger'></i>
+                                                ? <BsCheckLg style={{color: "green"}}></BsCheckLg>
+                                                : <AiOutlineClose style={{color: "red"}}></AiOutlineClose>
                                             }
                                         </td>
                                         <td className='p-2'>
                                             {
                                                 order.paid
-                                                ? <i className='fas fa-check text-success'></i>
-                                                : <i className='fas fa-times text-danger'></i>
+                                                ? <BsCheckLg style={{color: "green"}}></BsCheckLg>
+                                                : <AiOutlineClose style={{color: "red"}}></AiOutlineClose>
                                             }
                                         </td>
                                    </tr>

@@ -1,6 +1,6 @@
 module.exports = {
   env: {
-    "BASE_URL": "https://next-fox.vercel.app/",
+    "BASE_URL": "http://localhost:3000",
     "MONGODB_URL": "mongodb+srv://Nahuel:Nahuel123@cluster0.58kci.mongodb.net/Next?retryWrites=true&w=majority",
     "ACCESS_TOKEN_SECRET": "j@VsAzkxw6JDtSEPtU?^be-*8c@TGdTppNNyDY=N6fc%XHnb+C",
     "REFRESH_TOKEN_SECRET": "E^dZuMx4Yk5+*nVKSyJSYHb6&uRG8=gQhV-@6MrkU7*8?B2zzVLLG^_kmLNHGB%=ezXUXqxjY66-=*pm",
