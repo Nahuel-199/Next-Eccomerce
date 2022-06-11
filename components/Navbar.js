@@ -90,9 +90,9 @@ function Navbar() {
                                         fontWeight: "600",
                                         fontFamily: "'Urbanist', sans-serif",
                                         color: "#e5a900"
-                                    }}>SUBLI FOX</a>
+                                    }}>SENPAI FOX</a>
             </Link>
-            <img className={styles.logo} src='img/logoFox.png' />
+            <img className={styles.logo} src='img/senpai.png' />
             <ul className={styles.ulCart}>
                     <li className="nav-item">
                         <Link href="/cart">

@@ -1,15 +1,17 @@
 import styles from "../styles/Featured.module.css";
 import Image from "next/image";
 import { useState } from "react";
+import { BiRightArrow, BiLeftArrow } from "react-icons/bi";
+
 
 const Featured = () => {
     const [index, setIndex] = useState(0)
 
     const images = [
-      "/img/slider1.png",
-      "/img/slider2.png",
-      "/img/slider3.png",
-      "/img/slider4.png",
+      "/img/senpai1.jpg",
+      "/img/senpai2.jpg",
+      "/img/senpai3.jpg",
+      "/img/senpai4.jpg",
     ];
 
     const handleArrow = (direction) => {
@@ -25,7 +27,8 @@ const Featured = () => {
   return (
     <div className={styles.container}>
         <div className={styles.arrowContainer} style={{left:0}} onClick={() => handleArrow("1")}>
-        <Image src="/img/arrow.png" alt="" layout='fill' objectFit='contain'/>
+        {/* <Image src="/img/arrow.png" alt="" layout='fill' objectFit='contain'/> */}
+        <BiLeftArrow className={styles.arrow} />
         </div>
         <div className={styles.wrapper} style={{transform:`translateX(${-100*index}vw)`}}>
         {images.map((img, i) => (
@@ -35,7 +38,8 @@ const Featured = () => {
              ))}
         </div>
         <div className={styles.arrowContainer} style={{right:0}} onClick={() => handleArrow("r")}>
-        <Image src="/img/arrow2.png" alt="" layout='fill' objectFit='contain'/>
+        {/* <Image src="/img/arrow2.png" alt="" layout='fill' objectFit='contain'/> */}
+        <BiRightArrow className={styles.arrow2}/>
         </div>
     </div>
   )
