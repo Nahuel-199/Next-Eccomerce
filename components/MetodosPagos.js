@@ -19,7 +19,7 @@ const MetodosPagos = () => {
             <Link href="https://www.facebook.com/profile.php?id=100072559574435">
             <BsFacebook style={{animationDelay: "1s", color: "blue"}} className={styles.icon} />
             </Link>
-            <Link href="https://instagram.com/foxsublimaciones1.0?utm_medium=copy_link">
+            <Link href="https://instagram.com/senpaifoxs?igshid=YmMyMTA2M2Y=">
             <BsInstagram  style={{animationDelay: "2s",borderRadius: "40px",lineHeight: "250px",color: "white", background: "#d6249f",
             background: "radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%)",
             boxShadow: "0px 3px 10px rgba(0,0,0,.25)"
